@@ -222,5 +222,125 @@ body {
   font-weight: bold;
   border-radius: 10px;
   padding: 16px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.tictactoe__interface-one {
+  z-index: 2;
+  opacity: 100;
+  position: fixed;
+  top: 0px;
+  height: 0px;
+  min-width: 100vw;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.tictactoe__interface-two {
+  z-index: 1;
+  opacity: 0;
+  position: fixed;
+  top: 0px;
+  height: 0px;
+  min-width: 100vw;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  padding-top: 36px;
+}
+
+.tictactoe__turn {
+  display: flex;
+  justify-content: space-between;
+  width: 25vw;
+}
+
+.tictactoe__turn-player-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tictactoe__turn-player-line_one {
+  opacity: 1;
+  width: 100%;
+  border: 2px solid black;
+  transition: all 0.3s;
+}
+
+.tictactoe__turn-player-line_two {
+  opacity: 0;
+  width: 0%;
+  border: 2px solid black;
+  transition: all 0.3s;
+}
+
+.tictactoe__turn-player {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-weight: bold;
+}
+
+.tictactoe__table {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  margin-top: 36px;
+  overflow-y: scroll;
+}
+
+.tictactoe__table-box {
+  cursor: pointer;
+  width: 64px;
+  height: 64px;
+  border: 1px solid #79BBDF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tictactoe__table::-webkit-scrollbar {
+  display: none;
+}
+
+.tictactoe__winner {
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   visibility: hidden;
+}
+
+.tictactoe__winner-mask {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.7;
+}
+
+.tictactoe__winner-modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  background-color: white;
+}
+
+.tictactoe__winner-modal-text {
+  font-size: 24px;
+  font-weight: bold;
 }
