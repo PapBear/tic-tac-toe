@@ -269,6 +269,11 @@ function playGame() {
     return
   }
 
+  if (data?.input?.markerCount > data?.input?.inputArea) {
+    showNotification('error', 'Marker count must be lower than input area')
+    return
+  }
+
   const firstElementInterface = document.getElementsByClassName('tictactoe__interface-one')[0]
   const secondElementInterface = document.getElementsByClassName('tictactoe__interface-two')[0]
 
