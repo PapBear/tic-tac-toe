@@ -197,6 +197,14 @@ function resetGame() {
 
   selectedInputMarker.value = null
   resultInputMarker.innerHTML = ''
+
+  const firstLine = document.getElementsByClassName('tictactoe__turn-player-line_one')[0]
+  const secondLine = document.getElementsByClassName('tictactoe__turn-player-line_two')[0]
+
+  firstLine.style.width = '100%'
+  secondLine.style.width = '0%'
+  firstLine.style.opacity = 100
+  secondLine.style.opacity = 0
 }
 
 function showNotification(type, message) {
