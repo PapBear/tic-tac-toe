@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.cdnfonts.com/css/source-sans-pro" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/index.js"></script>
+  <title>Tic Tac Toe</title>
+</head>
+
+<body>
+  <!-- Notification Error -->
+  <div class="tictactoe__notification">
+    <p class="tictactoe__notification-text">-</p>
+  </div>
+
+  <div class="tictactoe">
+    <!-- First Interface -->
+    <div>
+      <!-- Title -->
+      <div class="tictactoe__title">
+        <h1 class="tictactoe__title-text">Tic Tac <span class="tictactoe__title-pink">&nbsp;Toe</span></h1>
+
+        <!-- Setting -->
+        <div class="tictactoe__title-setting">
+
+          <!-- Area Wide -->
+          <div class="tictactoe__title-setting-row">
+            <p class="tictactoe__title-setting-row-text">Input Area Size: <span id="inputAreaResult"
+                class="tictactoe__title-setting-row-text_result"></span></p>
+            <input id="inputArea" type="number" class="tictactoe__title-setting-row-input" />
+          </div>
+
+          <!-- Marker count -->
+          <div class="tictactoe__title-setting-row">
+            <p class="tictactoe__title-setting-row-text">Marker Count To Win: <span id="inputMarkerCountResult"
+                class="tictactoe__title-setting-row-text_result"></span></p>
+            <input id="inputMarkerCount" type="number" class="tictactoe__title-setting-row-input" />
+          </div>
+        </div>
+
+        <!-- Play Button -->
+        <div>
+          <button class="tictactoe__title-play" onclick="playGame()">Play The Game</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
