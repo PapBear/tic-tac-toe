@@ -16,6 +16,7 @@
     <p class="tictactoe__notification-text">-</p>
   </div>
 
+  <!-- Tic Tac Toe -->
   <div class="tictactoe">
     <!-- First Interface -->
     <div class="tictactoe__interface-one">
@@ -51,7 +52,45 @@
 
     <!-- Second Interface -->
     <div class="tictactoe__interface-two">
-      
+
+      <!-- Turn -->
+      <div class="tictactoe__turn">
+        <div class="tictactoe__turn-player-wrapper">
+          <div class="tictactoe__turn-player">
+            <p>Player</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828778.png" alt="Close" title="Close" width="44" height="44">
+          </div>
+          <div class="tictactoe__turn-player-line_one"></div>
+        </div>
+
+        <div class="tictactoe__turn-player-wrapper">
+          <div class="tictactoe__turn-player">
+            <p>Player</p>
+            <img src="https://cdn-icons-png.flaticon.com/512/481/481078.png" alt="Dry clean" title="Dry clean" width="44" height="44">
+          </div>
+          <div class="tictactoe__turn-player-line_two"></div>
+        </div>
+      </div>
+
+      <div>
+        <button class="tictactoe__title-play" onclick="resetGame()">Reset</button>
+      </div>
+
+      <!-- Tic Tac Toe Table -->
+      <div class="tictactoe__table">
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Winner -->
+  <div class="tictactoe__winner">
+    <div class="tictactoe__winner-mask"></div>
+    <div class="tictactoe__winner-modal">
+      <p class="tictactoe__winner-modal-text">Congratulations</p>
+      <p class="tictactoe__winner-modal-winner"></p>
+      <div>
+        <button class="tictactoe__title-play" onclick="resetGame()">Reset</button>
+      </div>
     </div>
   </div>
 </body>
