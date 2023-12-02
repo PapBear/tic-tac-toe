@@ -1,8 +1,9 @@
 let data = {
   input: {
     inputArea: null,
-    markerCount: null
-  }
+    markerCount: null,
+  },
+  notificationShow: false
 }
 
 
@@ -58,8 +59,46 @@ function playGameValidation() {
   return true
 }
 
+function setInterface() {
+
+}
+
+function showNotification (type, message) {
+  const errorElement = document.getElementsByClassName('tictactoe__notification')[0]
+  const errorElementText = document.getElementsByClassName('tictactoe__notification')[0]
+
+  switch (type) {
+    case 'error':
+      errorElement.style.backgroundColor = '#F2DEDF'
+      errorElement.style.color = '#984C52'
+      errorElementText.innerHTML = `${message}`
+      break
+
+    case 'success':
+      errorElement.style.backgroundColor = '#6EBD7D'
+      errorElement.style.color = '#FFFFFF'
+      errorElementText.innerHTML = `${message}`
+      break
+  }
+
+  if (data.notificationShow === true) {
+    return
+  }
+
+  data.notificationShow = true
+  errorElement.style.visibility = 'initial'
+
+  // Hide the notification
+  setTimeout(() => {
+    data.notificationShow = false
+    errorElement.style.visibility = 'hidden'
+  }, 3000)
+}
+
 function playGame() {
-  console.log(playGameValidation())
+  if (!playGameValidation()) {
+    showNotification('error', 'Please fill all input correctly')
+  }
 }
 // =========================================================== //
 
