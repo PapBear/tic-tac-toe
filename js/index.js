@@ -257,13 +257,17 @@ function setData() {
   setGameListener()
   setArray()
 
+  let box = ''
+
   for (let i = 0; i < (data?.input?.inputArea); i++) {
     for (let j = 0; j < (data?.input?.inputArea); j++) {
-      table.innerHTML += `
+      box += `
       <div id=tictacbox-${i},${j} class="tictactoe__table-box"></div>
     `
     }
   }
+
+  table.innerHTML = box
 }
 
 function setTable() {
